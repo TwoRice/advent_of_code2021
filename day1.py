@@ -9,6 +9,4 @@ if __name__ == "__main__":
         
     print(f'Part 1: {count_increases(sonar_data)}')
     windowed_data = np.convolve(sonar_data, np.ones(3, dtype=int), 'valid')
-    print(f'Part 2: {count_increases(windowed_data)}')
-          
-        
+    print(f'Part 2: {count_increases(windowed_data)}')               
