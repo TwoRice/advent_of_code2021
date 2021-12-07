@@ -17,7 +17,7 @@ def count_fish(fish_data, days):
 
 if __name__ == "__main__":
     with open('data/input6.txt', 'r') as f:
-        fish_data = np.array(f.read().replace('\n', '').split(','), dtype=int)
+        fish_data = np.array(f.read().split(','), dtype=int)
         
     fish = count_fish(fish_data, 80)
     print(f'Part 1: {fish}')
