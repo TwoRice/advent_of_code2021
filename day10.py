@@ -18,10 +18,12 @@ if __name__ == "__main__":
                     error_score += score_map[char]
                     error_idx.append(i)
                     break
+                    
     print(f'Part 1: {error_score}') 
     
     valid_lines = [chunks[i] for i in range(len(chunks)) if i not in error_idx]
     score_map = {'(': 1, '[': 2, '{': 3, '<': 4}
+    
     line_scores = []
     for line in valid_lines:
         score = 0
@@ -35,4 +37,5 @@ if __name__ == "__main__":
             score *= 5
             score += score_map[char]
         line_scores.append(score)
+        
     print(f'Part 2: {sorted(line_scores)[int(len(valid_lines) / 2)]}')
