@@ -34,8 +34,7 @@ if __name__ == "__main__":
             else:
                 active_open_chars.pop()
         for char in active_open_chars[::-1]:
-            score *= 5
-            score += score_map[char]
+            score = score*5 + score_map[char]
         line_scores.append(score)
         
     print(f'Part 2: {sorted(line_scores)[int(len(valid_lines) / 2)]}')
